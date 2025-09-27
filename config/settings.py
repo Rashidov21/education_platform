@@ -135,3 +135,11 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
 }
+
+# Use Django's default User model
+AUTH_USER_MODEL = 'auth.User'
+
+# Enable authentication with username, email, and password
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Default backend for username/password
+]
